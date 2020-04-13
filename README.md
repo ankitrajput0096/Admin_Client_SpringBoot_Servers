@@ -41,6 +41,7 @@ docker-compose up
 ```
 Or
 
+
 Start docker with scaled up services:
 
 ```
@@ -57,6 +58,7 @@ docker-compose up
 ```
 Or
 
+
 Start docker with scaled up services:
 
 ```
@@ -67,7 +69,7 @@ docker-compose up --scale clientone=2 --scale clienttwo=3
 Can scale up clientone and clienttwo services to max instances of 5.
 If you want to scale even higher, then increase the port range in `docker-compose` file.
 
-Your main Admin server server should be now running on http://localhost:8000
+Your main Admin server should be now running on http://localhost:8000
 
 ## Built With
 
