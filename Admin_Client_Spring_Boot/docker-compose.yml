@@ -1,0 +1,21 @@
+version: "3"
+services:
+  springadminserver:
+    build:
+      context: ./Admin_Server
+    ports:
+      - "8000:8000"
+  clientone:
+    build:
+      context: ./ClientOne_Server
+    ports:
+      - "8080-8085:8080"
+    depends_on:
+      - springadminserver
+  clienttwo:
+    build:
+      context: ./ClientTwo_Server
+    ports:
+      - "8086-8090:8080"
+    depends_on:
+      - springadminserver
