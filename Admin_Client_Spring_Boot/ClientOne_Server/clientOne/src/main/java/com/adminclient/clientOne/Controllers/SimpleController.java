@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SimpleController {
 
-    @RequestMapping(value="/helloSimpleEndpointClientOne", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(
+            value="/helloSimpleEndpointClientOne",
+            method = RequestMethod.GET,
+            produces = "application/json")
     public ResponseEntity<String> helloSimpleEndpoint() {
-        return ResponseEntity.ok().body("This is hello simple endpoint from client One");
+        return ResponseEntity.ok()
+                .body("This is hello simple endpoint from client One");
     }
 }
